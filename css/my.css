@@ -1,406 +1,440 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Grape+Nuts&family=Merriweather:wght@300&family=Roboto+Serif:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
 
-a.anchor{
-    display: block;
-    position: relative;
-    top: -159px;
-    visibility: hidden;
+a.anchor {
+  display: block;
+  position: relative;
+  top: -159px;
+  visibility: hidden;
 }
 
-a.anchor-two{
-    display: block;
-    position: relative;
-    top: -100px;
-    visibility: hidden;
+a.anchor-two {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
 }
 
-a.anchor-three{
-    display: block;
-    position: relative;
-    top: -175px;
-    visibility: hidden;
+a.anchor-three {
+  display: block;
+  position: relative;
+  top: -175px;
+  visibility: hidden;
 }
-
 
 * {
-    margin: 0px;
-    padding: 0px;
-    /**outline: none; */
+  margin: 0px;
+  padding: 0px;
+  /**outline: none; */
 }
 
-h1, h2, h3, h4, h5{
-    font-weight: lighter;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: lighter;
 }
 
-body, html {
-    width: 100%;
-    height: 100%;
-  }
- 
-body{
-    background-color: aliceblue;
-    font-family: 'Karla', sans-serif;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
 }
+
+body {
+  background-color: aliceblue;
+  font-family: 'Karla', sans-serif;
+}
+
 /*toolbar*/
-header{
-    width: 100%;
-    padding: 0px 0.5% 0px 0.5%;
-    background: linear-gradient(to top, #b4b6cb, #b0b2c7);
+header {
+  width: 100%;
+  padding: 0px 0.5% 0px 0.5%;
+  background: linear-gradient(to top, #b4b6cb, #b0b2c7);
+  float: left;
+  position: fixed;
+
+
+  border-bottom: 2px solid rgb(173, 173, 173);
+}
+
+header a {
+  text-decoration: none;
+}
+
+header #logo a {
+  font-size: 3em;
+  /** line-height: 75px; */
+  margin-left: 30px;
+  font-family: 'Grape Nuts', cursive;
+  font-weight: bold;
+
+  color: black;
+}
+
+#position {
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+#position>a {
+  color: black;
+}
+
+#position>a:hover {
+  color: rgb(84, 84, 84);
+}
+
+@media (min-width: 1302px) {
+  #logo {
     float: left;
-    position: fixed;
+    min-width: 25%;
+  }
 
-      
-    border-bottom: 2px solid rgb(173, 173, 173);   
+  #position {
+    float: left;
+    width: 75%;
+  }
+
+  #position>a {
+    font-size: 1em;
+  }
+
+  #position>a:not(:last-child) {
+    margin-right: 13%;
+  }
 }
 
-header a{
-    text-decoration: none;
+@media (max-width: 1302px) and (min-width: 890px) {
+  #logo {
+    float: left;
+    min-width: 5%;
+  }
+
+  header #logo a {
+    margin-left: 15px;
+
+  }
+
+  #position {
+    float: left;
+    width: 62%;
+  }
+
+  #position>a {
+    font-size: 1.2em;
+  }
+
+  #position>a:not(:last-child) {
+    margin-right: 5%;
+  }
+
+  #position>a:first-child {
+    margin-left: 10%;
+  }
 }
 
-header #logo a{
-    font-size: 3em;  
-    /** line-height: 75px; */ 
-    margin-left: 30px;
-    font-family: 'Grape Nuts', cursive;
-    font-weight: bold;
-
-    color: black;
-}
-
-#position{  
-    text-align: center;    
-    margin-top: 1.5em;    
-}
-
-#position > a{     
-    color: black;   
-}
-
-#position > a:hover{
-    color: rgb(84, 84, 84);
-}
-
-@media (min-width: 1302px){
-    #logo{
-        float: left;
-        min-width: 25%;       
-    }
-    #position{     
-        float: left;  
-        width: 75%;       
-    } 
-    #position > a{ 
-        font-size: 1em; 
-    }
-    #position > a:not(:last-child){
-        margin-right: 13%;
-    }   
-}
-
-@media (max-width: 1302px) and (min-width: 890px){
-    #logo{    
-        float: left;
-        min-width: 5%;       
-    }
-    header #logo a{
-        margin-left: 15px; 
-       
-    }
-    #position{    
-        float: left;  
-        width: 62%;               
-    }
-    #position > a{ 
-        font-size: 1.2em; 
-    }
-    #position > a:not(:last-child){
-        margin-right: 5%;
-    }
-    #position > a:first-child{
-        margin-left: 10%;
-    }   
-}
-@media (max-width: 890px){
-    #logo{
-        text-align: center;
-        margin-top: 10px;
-        width: 100%;
-        font-size: 0.9em; 
-        /**
+@media (max-width: 890px) {
+  #logo {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 0.9em;
+    /**
          * font-weight: 600;
-       
-        line-height: 30px; */ 
-        padding-left: 0; 
-                 
-    }
-    header #logo a{
-        margin-left: 0; 
-    }
-    #position{
-        margin-top: 0.5em;  
-        float: left;  
-        width: 100%;
-       padding-left: 0;
-       text-align: center;
-    }
-    #position > a{ 
-        font-size: 1em; 
-    }
-    #position > a:not(:last-child){
-        margin-right: 9%;
-    }
+
+        line-height: 30px; */
+    padding-left: 0;
+
+  }
+
+  header #logo a {
+    margin-left: 0;
+  }
+
+  #position {
+    margin-top: 0.5em;
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  #position>a {
+    font-size: 1em;
+  }
+
+  #position>a:not(:last-child) {
+    margin-right: 9%;
+  }
 }
 
 
 
 
 /*head */
-#top{   
-    width: 100%;
-    background-image: url(img/wallpaperflare.com_wallpaper.jpg);
-    /**background-blend-mode: multiply;
+#top {
+  width: 100%;
+  background-image: url(img/wallpaperflare.com_wallpaper.jpg);
+  /**background-blend-mode: multiply;
      * background-color: #2e3a44;
-     */  
-    background-size: cover;
-    text-align: center;  
-    border-bottom: 2px solid rgb(173, 173, 173); 
+     */
+  background-size: cover;
+  text-align: center;
+  border-bottom: 2px solid rgb(173, 173, 173);
 }
-@media (min-width: 890px){
-    #top{
-        font-size: 3em;
-        height:1000px;
-    }
+
+@media (min-width: 890px) {
+  #top {
+    font-size: 3em;
+    height: 1000px;
+  }
 }
-@media (max-width: 890px){
-    #top{
-        font-size: 2em;
-        height:700px;
-        padding-top: 20%;
-    }
-}
-#top h1 {
+
+@media (max-width: 890px) {
+  #top {
+    font-size: 2em;
+    height: 700px;
     padding-top: 20%;
   }
+}
+
+#top h1 {
+  padding-top: 20%;
+}
+
 #top h3 {
-    color: #4f4f4f;
-  }
+  color: #4f4f4f;
+}
 
 /*main */
-#main{
-    float: left;
-    font-size: 1.5em; 
+#main {
+  float: left;
+  font-size: 1.5em;
 }
 
-@media(min-width: 907px){
-    #main{        
+@media(min-width: 907px) {
+  #main {
     margin: 100px 20%;
-    width: 60%;   
-    font-size: 1.5em;      
-    }
+    width: 60%;
+    font-size: 1.5em;
+  }
 }
+
 @media(max-width: 907px) {
-    #main{
+  #main {
     margin: 100px 10%;
-    width: 80%;   
-    font-size: 1.2em;  
-    }
-}
-@media(max-width: 600px){
-    #main div{    
-        width: 100%!important;
-        margin-bottom: 15px;     
-    }
+    width: 80%;
+    font-size: 1.2em;
+  }
 }
 
-#main div{    
-    width: 46%;
-    float: left;
-    margin-right: 4%;
+@media(max-width: 600px) {
+  #main div {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
 }
 
-#main h3{
-    font-size: 2em;
+#main div {
+  width: 46%;
+  float: left;
+  margin-right: 4%;
 }
+
+#main h3 {
+  font-size: 2em;
+}
+
 /*video */
 
-#owerview{
-    float: left;
-    background-image: url(img/dolina-smerti-california-shosse-doroga-put.jpg);
-    background-size: cover;
+#owerview {
+  float: left;
+  background-image: url(img/dolina-smerti-california-shosse-doroga-put.jpg);
+  background-size: cover;
 
-    background-attachment: fixed;
+  background-attachment: fixed;
 
-    padding: 100px 0;
-    width: 100%;
-    text-align: center;
-    color: aliceblue;
+  padding: 100px 0;
+  width: 100%;
+  text-align: center;
+  color: aliceblue;
 
-    min-height: 500px;
+  min-height: 500px;
 }
 
-#owerview h2{
-    font-size: 3.5em;
-}
-#owerview h3{
-    font-size: 2.5em;
+#owerview h2 {
+  font-size: 3.5em;
 }
 
-#owerview .img{
-    float: left;
-    width: 30%;
-    
-    margin-right: 13%;
-    margin-top: 100px;
+#owerview h3 {
+  font-size: 2.5em;
 }
 
-#owerview .img:not(:last-child){
-    margin-left: 13.5%;
+#owerview .img {
+  float: left;
+  width: 30%;
+
+  margin-right: 13%;
+  margin-top: 100px;
 }
 
-#owerview iframe{
-    width:100%;
-    max-width: 500px;
-    border: 3px solid rgb(166, 166, 166);
-    float: left;
+#owerview .img:not(:last-child) {
+  margin-left: 13.5%;
 }
 
-#owerview span{
-    font-size: 1.5em;
-    font-weight: bold;
-    float: left;
-    width: 100%;
-    margin-top: 10px;
+#owerview iframe {
+  width: 100%;
+  max-width: 500px;
+  border: 3px solid rgb(166, 166, 166);
+  float: left;
+}
+
+#owerview span {
+  font-size: 1.5em;
+  font-weight: bold;
+  float: left;
+  width: 100%;
+  margin-top: 10px;
 }
 
 @media(max-width: 700px) {
-    #owerview{
-      
-        background-image: url(img/dolina-smerti-california-shosse-doroga-put\ —\ копия.jpg);
-        background-size: cover;
-        background-attachment: unset;
-    
-        
-    }
-    #owerview .img{
-        margin-top: 50px;
-    }
-    #owerview .img{
-        float: left;
-        width: 80%!important;
-        margin-right: 0!important;
-        margin-left: 10%!important;
-    }
-}
-/**contacts */
-#contacts{
-    width: 100%;
-    background-color: aliceblue;
+  #owerview {
+
+    background-image: url(img/dolina-smerti-california-shosse-doroga-put\ —\ копия.jpg);
+    background-size: cover;
+    background-attachment: unset;
+
+
+  }
+
+  #owerview .img {
+    margin-top: 50px;
+  }
+
+  #owerview .img {
     float: left;
-    padding-top: 50px;
-    padding-bottom: 45px;
-    border-top: 3px solid gray;
+    width: 80% !important;
+    margin-right: 0 !important;
+    margin-left: 10% !important;
+  }
 }
 
-#contacts h5{
-    font-size: 3em;
+/**contacts */
+#contacts {
+  width: 100%;
+  background-color: aliceblue;
+  float: left;
+  padding-top: 50px;
+  padding-bottom: 45px;
+  border-top: 3px solid gray;
 }
 
-#form_input{
-    width: 35%;
-    margin-left: 37%;
+#contacts h5 {
+  font-size: 3em;
+}
+
+#form_input {
+  width: 35%;
+  margin-left: 37%;
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+#form_input label {
+  font-size: 1.4em;
+  color: #3c3c3c;
+  font-weight: bold;
+
+}
+
+#form_input label>span {
+  color: red;
+}
+
+#form_input .inp,
+#form_input textarea {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  width: 70%;
+  border-radius: 7px;
+  border: 3px solid silver;
+  padding: 10px 2%;
+}
+
+#form_input input:focus,
+#form_input textarea:focus {
+  border-color: #3c3c3c;
+}
+
+.button {
+  display: block;
+  border-radius: 7px;
+  background-color: #fa7639;
+  width: 100px;
+  height: 42px;
+  border: none;
+  color: white;
+  font-size: 17px;
+}
+
+.button:hover {
+  background-color: #9a4924;
+  cursor: pointer;
+}
+
+.button:focus {
+  box-shadow: 0 0 0px 4px rgba(60, 60, 60, 0.25);
+}
+
+@media(max-width:700px) {
+  #form_input {
+    width: 61%;
+    margin-left: 27%;
     margin-top: 20px;
     font-size: 1.1em;
-}
-
-#form_input label{
-    font-size: 1.4em;
-    color: #3c3c3c;
-    font-weight: bold;
-    
-}
-
-#form_input label > span{
-    color: red;
-}
-
-#form_input .inp,#form_input textarea{
-    margin-top: 3px;
-    margin-bottom: 10px;
-    width: 70%;
-    border-radius: 7px;
-    border: 3px solid silver;
-    padding: 10px 2%;
-}
-
-#form_input input:focus ,#form_input textarea:focus{
-    border-color: #3c3c3c;
-}
-
-.button{
-    display: block;
-    border-radius: 7px;
-    background-color: #fa7639;
-    width: 100px;
-    height: 42px;
-    border: none;
-    color: white;
-    font-size: 17px;
-}
-.button:hover{
-    background-color: #9a4924;
-    cursor: pointer;
-}
-.button:focus{ 
-    box-shadow: 0 0 0px 4px rgba(60, 60, 60, 0.25);
-}
-
-@media(max-width:700px){
-    #form_input{
-        width: 61%;
-        margin-left: 27%;
-        margin-top: 20px;
-        font-size: 1.1em;
-    }
+  }
 }
 
 /**faq */
-#faq{
+#faq {
+  float: left;
+  width: 100%;
+  background-color: azure;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  border-top: 2px dashed silver;
+
+}
+
+#faq div {
+  float: left;
+  width: 25%;
+  margin-left: 6%;
+}
+
+.title {
+  font-size: 1.9em;
+  color: #6d6d6d;
+  margin-bottom: 10px;
+}
+
+.header {
+  font-size: 1.2em;
+  color: #4a4a4a;
+  font-weight: bold;
+}
+
+#faq p {
+  margin-bottom: 40px;
+}
+
+@media(max-width: 600px) {
+  #faq div {
     float: left;
-    width: 100%;
-    background-color: azure;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    border-top: 2px dashed silver;
-
-}
-
-#faq div{
-    float: left;
-    width: 25%;
-    margin-left: 6%;
-}
-
-.title{
-    font-size: 1.9em;
-    color: #6d6d6d;
-    margin-bottom: 10px;
-}
-
-.header{
-    font-size: 1.2em;
-    color: #4a4a4a;
-    font-weight: bold;
-}
-
-#faq p{
-    margin-bottom: 40px;
-}
-
-@media(max-width: 600px){
-    #faq div{
-        float: left;
-        width: 80%!important;
-        margin-left: 10%;
-    }
+    width: 80% !important;
+    margin-left: 10%;
+  }
 }
